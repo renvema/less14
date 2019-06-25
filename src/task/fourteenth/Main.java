@@ -11,7 +11,8 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Please enter text:");
-        new ArrayList<String>(Arrays.asList(new Scanner(System.in).nextLine().toLowerCase().split("[^а-яa-z0-9]+")))
+        new ArrayList<String>(Arrays.asList(new Scanner(System.in)
+                .nextLine().toLowerCase().split("[^а-яa-z0-9]+")))
                 .stream()
                 .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
                 .entrySet()
